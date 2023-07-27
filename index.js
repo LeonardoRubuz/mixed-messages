@@ -44,10 +44,14 @@ let months = [
     ,"Le 25 décembre est le jour de Noël, mais aussi celui du pudding. Un régal pour les papilles et pour les yeux."],
 ]
 
-// retrieving a random object from the months list
-const randomMonth = Math.floor(Math.random() * months.length);
+function displayMessage() {
+    // retrieving a random set of anecdote from the months list
+    const randomMonth = Math.floor(Math.random() * months.length);
 
 // retrieving a random anecdotes from a month's anecdotes list
-const randomStory = Math.floor(Math.random() * months[randomMonth].length);
+    const randomStory = Math.floor(Math.random() * months[randomMonth].length);
 
-console.log(randomStory);
+    return console.log(months[randomMonth][randomStory]);
+}
+
+displayMessage()
